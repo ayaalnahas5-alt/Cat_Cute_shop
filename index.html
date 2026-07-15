@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Miau Shop - Scharfe Katzenbaben</title>
+    <!-- main css -->
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
 
     <!-- Navigation Bar -->
@@ -45,8 +49,11 @@
             <div class="about-content">
                 <div class="about-text">
                     <h3>Herzlich willkommen im Miau Shop!</h3>
-                    <p>Wir sind ein kleines Team von Katzenliebhabern, die es sich zur Aufgabe gemacht haben, die süßesten und hochwertigsten Katzenbaben auf den Markt zu bringen. Jedes Baby ist handgefertigt mit viel Liebe zum Detail.</p>
-                    <p>Unsere Katzenbaben sind nicht nur süß, sondern auch langlebig und sicher für Kinder ab 3 Jahren. Wir verwenden nur hochwertige Materialien und achten streng auf Qualität.</p>
+                    <p>Wir sind ein kleines Team von Katzenliebhabern, die es sich zur Aufgabe gemacht haben, die
+                        süßesten und hochwertigsten Katzenbaben auf den Markt zu bringen. Jedes Baby ist handgefertigt
+                        mit viel Liebe zum Detail.</p>
+                    <p>Unsere Katzenbaben sind nicht nur süß, sondern auch langlebig und sicher für Kinder ab 3 Jahren.
+                        Wir verwenden nur hochwertige Materialien und achten streng auf Qualität.</p>
                     <div class="stats">
                         <div class="stat-item">
                             <span class="stat-number">500+</span>
@@ -74,15 +81,16 @@
         <div class="container">
             <h2 class="section-title">Unsere Events & Neuheiten</h2>
             <p class="section-subtitle">Entdecke unsere neuesten Katzenbaben und Sonderangebote</p>
-            
+
             <div class="slider-container">
                 <button class="slider-btn prev-btn" onclick="moveSlide(-1)">❮</button>
-                
+
                 <div class="slider">
                     <div class="slide">
                         <div class="product-card">
                             <div class="product-image">
-                                <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=400" alt="Katzenbaby - Orange">
+                                <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=400"
+                                    alt="Katzenbaby - Orange">
                                 <div class="product-badge">Neu</div>
                             </div>
                             <div class="product-info">
@@ -98,7 +106,8 @@
                     <div class="slide">
                         <div class="product-card">
                             <div class="product-image">
-                                <img src="https://images.unsplash.com/photo-1495360010541-f48722b34f7d?w=400" alt="Katzenbaby - Grau">
+                                <img src="https://images.unsplash.com/photo-1495360010541-f48722b34f7d?w=400"
+                                    alt="Katzenbaby - Grau">
                                 <div class="product-badge sale">-20%</div>
                             </div>
                             <div class="product-info">
@@ -115,7 +124,8 @@
                     <div class="slide">
                         <div class="product-card">
                             <div class="product-image">
-                                <img src="https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13?w=400" alt="Katzenbaby - Weiß">
+                                <img src="https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13?w=400"
+                                    alt="Katzenbaby - Weiß">
                                 <div class="product-badge">Bestseller</div>
                             </div>
                             <div class="product-info">
@@ -131,7 +141,8 @@
                     <div class="slide">
                         <div class="product-card">
                             <div class="product-image">
-                                <img src="https://images.unsplash.com/photo-1533738363-b7f9aef128ce?w=400" alt="Katzenbaby - Schwarz">
+                                <img src="https://images.unsplash.com/photo-1533738363-b7f9aef128ce?w=400"
+                                    alt="Katzenbaby - Schwarz">
                                 <div class="product-badge">Limitiert</div>
                             </div>
                             <div class="product-info">
@@ -147,7 +158,8 @@
                     <div class="slide">
                         <div class="product-card">
                             <div class="product-image">
-                                <img src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?w=400" alt="Katzenbaby - Calico">
+                                <img src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?w=400"
+                                    alt="Katzenbaby - Calico">
                             </div>
                             <div class="product-info">
                                 <h3>Tupfen der Calico</h3>
@@ -179,7 +191,7 @@
         <div class="container">
             <h2 class="section-title">Kontaktiere Uns</h2>
             <p class="section-subtitle">Hast du Fragen? Schreib uns gerne!</p>
-            
+
             <div class="contact-wrapper">
                 <div class="contact-info">
                     <div class="info-item">
@@ -269,7 +281,7 @@
     </footer>
 
     <!-- JavaScript for Slider -->
-    <script>
+    <script src="script.js">
         let slideIndex = 0;
         const slides = document.querySelectorAll('.slide');
         const dots = document.querySelectorAll('.dot');
@@ -278,10 +290,10 @@
         function showSlide(index) {
             if (index >= totalSlides) slideIndex = 0;
             if (index < 0) slideIndex = totalSlides - 1;
-            
+
             const slider = document.querySelector('.slider');
             slider.style.transform = `translateX(-${slideIndex * 100}%)`;
-            
+
             dots.forEach(dot => dot.classList.remove('active'));
             dots[slideIndex].classList.add('active');
         }
@@ -303,4 +315,5 @@
     </script>
 
 </body>
+
 </html>
